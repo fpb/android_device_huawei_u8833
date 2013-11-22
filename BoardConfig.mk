@@ -48,16 +48,16 @@ COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE
 # Kernel 
 TARGET_KERNEL_SOURCE := kernel/huawei/u8833
 TARGET_KERNEL_CONFIG := cm_msm8x25_defconfig
-TARGET_BOOTLOADER_BOARD_NAME := u8833
+TARGET_BOOTLOADER_BOARD_NAME := u8951
 BOARD_KERNEL_CMDLINE := androidboot.hardware=huawei
 BOARD_KERNEL_BASE := 0x00200000
 BOARD_PAGE_SIZE := 2048
 TARGET_USERIMAGES_USE_EXT4 := true
 
-TARGET_SPECIFIC_HEADER_PATH := device/huawei/u8833/include
+TARGET_SPECIFIC_HEADER_PATH := device/huawei/u8951/include
 
 # Graphics
-BOARD_EGL_CFG := device/huawei/u8833/prebuilt/system/lib/egl/egl.cfg
+BOARD_EGL_CFG := device/huawei/u8951/prebuilt/system/lib/egl/egl.cfg
 USE_OPENGL_RENDERER := true
 TARGET_USES_ION := true
 TARGET_QCOM_DISPLAY_VARIANT := legacy
@@ -98,11 +98,11 @@ TARGET_PROVIDES_LIBAUDIO := true
 TARGET_PROVIDES_LIBLIGHTS := true
 
 # RIL
-BOARD_RIL_CLASS := ../../../device/huawei/u8833/ril/
+BOARD_RIL_CLASS := ../../../device/huawei/u8951/ril/
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/huawei/u8833/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/huawei/u8951/bluetooth
 
 # Camera
 USE_CAMERA_STUB := false
@@ -118,7 +118,7 @@ TARGET_ARCH_LOWMEM := true
 # GPS
 BOARD_USES_QCOM_LIBRPC := true
 BOARD_USES_QCOM_GPS := true
-BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := u8833
+BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := u8951
 BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 50000
 
 # Web Rendering
@@ -127,18 +127,18 @@ TARGET_FORCE_CPU_UPLOAD := true
 
 # Recovery
 BOARD_HAS_NO_SELECT_BUTTON := true
-TARGET_PREBUILT_RECOVERY_KERNEL := device/huawei/u8833/recovery/kernel
-TARGET_RECOVERY_INITRC := device/huawei/u8833/recovery/init.rc
-TARGET_RECOVERY_FSTAB := device/huawei/u8833/recovery/etc/recovery.fstab
+TARGET_PREBUILT_RECOVERY_KERNEL := device/huawei/u8951/recovery/kernel
+TARGET_RECOVERY_INITRC := device/huawei/u8951/recovery/init.rc
+TARGET_RECOVERY_FSTAB := device/huawei/u8951/recovery/etc/recovery.fstab
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_USES_MMCUTILS := true
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
-BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/huawei/u8833/recovery/recovery-keys.c
+BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/huawei/u8951/recovery/recovery-keys.c
 DEVICE_RESOLUTION := 480x800
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storage/lun%d/file
 BOARD_USE_CUSTOM_RECOVERY_FONT:= \"roboto_10x18.h\"
-BOARD_CUSTOM_GRAPHICS := ../../../device/huawei/u8833/recovery/graphics.c
+BOARD_CUSTOM_GRAPHICS := ../../../device/huawei/u8951/recovery/graphics.c
 
 # USB
 BOARD_UMS_LUNFILE := "/sys/class/android_usb/android0/f_mass_storage/lun%d/file"
