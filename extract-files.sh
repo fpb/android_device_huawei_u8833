@@ -6,7 +6,7 @@
 ## $2 specifies the zip file to extract from (default = ../../../${DEVICE}_update.zip)
 
 VENDOR=huawei
-DEVICE=u8833
+DEVICE=u8951
 
 BASE=../../../vendor/$VENDOR/$DEVICE/proprietary
 rm -rf $BASE/*
