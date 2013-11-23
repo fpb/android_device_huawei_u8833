@@ -21,6 +21,11 @@ on early-init
     mkdir /dev/bus 0755 root root
     mkdir /dev/bus/usb 0755 root root
 
+    # NFC stuff
+    chmod 0660 /dev/pn544
+    chown nfc nfc /dev/pn544
+    setprop ro.nfc.port "I2C"
+
 on emmc-fs
     # Mount mmc partitions
     mount_all /fstab.huawei
