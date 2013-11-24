@@ -1,0 +1,1204 @@
+From 3077dc5db7a571c8e04a128ed868be3ee5025b70 Mon Sep 17 00:00:00 2001
+From: Kra1o5 <kra1o5x@gmail.com>
+Date: Sat, 23 Nov 2013 17:12:29 +0100
+Subject: [PATCH] Add-ES-&-PT-translation
+
+---
+ res/values-es/arrays.xml  | 354 ++++++++++++++++++++++++++++++++++++++++++++++
+ res/values-es/strings.xml | 231 ++++++++++++++++++++++++++++++
+ res/values-pt/arrays.xml  | 352 +++++++++++++++++++++++++++++++++++++++++++++
+ res/values-pt/strings.xml | 224 +++++++++++++++++++++++++++++
+ 4 files changed, 1161 insertions(+)
+ create mode 100644 res/values-es/arrays.xml
+ create mode 100644 res/values-es/strings.xml
+ create mode 100644 res/values-pt/arrays.xml
+ create mode 100644 res/values-pt/strings.xml
+
+diff --git a/res/values-es/arrays.xml b/res/values-es/arrays.xml
+new file mode 100644
+index 0000000..fd40671
+--- /dev/null
++++ b/res/values-es/arrays.xml
+@@ -0,0 +1,354 @@
++<?xml version="1.0" encoding="utf-8"?>
++<!--
++ * Copyright (c) 2009, 2011, 2012 The Linux Foundation. All rights reserved.
++ *
++ * Redistribution and use in source and binary forms, with or without
++ * modification, are permitted provided that the following conditions are met:
++ *    * Redistributions of source code must retain the above copyright
++ *      notice, this list of conditions and the following disclaimer.
++ *    * Redistributions in binary form must reproduce the above copyright
++ *      notice, this list of conditions and the following disclaimer in the
++ *      documentation and/or other materials provided with the distribution.
++ *    * Neither the name of The Linux Foundation nor
++ *      the names of its contributors may be used to endorse or promote
++ *      products derived from this software without specific prior written
++ *      permission.
++ *
++ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
++ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
++ * IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
++ * NON-INFRINGEMENT ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR
++ * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
++ * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
++ * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
++ * OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
++ * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
++ * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
++ * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
++-->
++<resources>
++
++  <string-array name="ster_mon_entries">
++    <item>Estéreo</item>
++    <item>Mono</item>
++  </string-array>
++
++  <string-array name="ster_mon_values">
++    <item>0</item>
++    <item>1</item>
++  </string-array>
++
++  <string-array name="record_durations_entries">
++    <item>5 minutos</item>
++    <item>15 minutos</item>
++    <item>30 minutos</item>
++    <item>Hasta detenerse</item>
++  </string-array>
++
++
++  <string-array name="record_duration_values">
++    <item>5</item>
++    <item>15</item>
++    <item>30</item>
++    <item>-1</item>
++  </string-array>
++
++  <string-array name="sleep_duration_values">
++    <item>15 minutos</item>
++    <item>30 minutos</item>
++    <item>45 minutos</item>
++    <item>1 Hora</item>
++  </string-array>
++
++    <!-- This array should be in seconds and should match the values above -->
++  <string-array name="sleep_duration_values_seconds">
++    <item>900</item>
++    <item>1800</item>
++    <item>2700</item>
++    <item>3600</item>
++  </string-array>
++
++  <string-array name="search_category_rbds_entries">
++    <item>Todas las Emisoras</item>
++    <item>Viejos Éxitos</item>
++    <item>Clásica</item>
++    <item>Rock Clásico</item>
++    <item>Educativa</item>
++    <item>Country</item>
++    <item>Emergencia</item>
++    <item>Prueba de Emergencia</item>
++    <item>Idioma Extranjero</item>
++    <item>Información</item>
++    <item>Jazz</item>
++    <item>Noticias</item>
++    <item>Nostalgia</item>
++    <item>Antigua</item>
++    <item>Personal</item>
++    <item>Pública</item>
++    <item>Música Religiosa</item>
++    <item>Charla Religiosa</item>
++    <item>Rhythm and Blues</item>
++    <item>Rock</item>
++    <item>Soft</item>
++    <item>Soft Rock</item>
++    <item>Soft Rhythm and Blues</item>
++    <item>Deportes</item>
++    <item>Charla</item>
++    <item>Top 40</item>
++    <item>El Tiempo</item>
++  </string-array>
++
++  <string-array name="search_category_rbds_values">
++    <item>0</item>
++    <item>7</item>
++    <item>15</item>
++    <item>6</item>
++    <item>23</item>
++    <item>10</item>
++    <item>31</item>
++    <item>30</item>
++    <item>18</item>
++    <item>2</item>
++    <item>14</item>
++    <item>1</item>
++    <item>13</item>
++    <item>11</item>
++    <item>21</item>
++    <item>22</item>
++    <item>19</item>
++    <item>20</item>
++    <item>16</item>
++    <item>5</item>
++    <item>12</item>
++    <item>8</item>
++    <item>17</item>
++    <item>3</item>
++    <item>4</item>
++    <item>9</item>
++    <item>29</item>
++  </string-array>
++
++
++  <string-array name="search_category_rds_entries">
++    <item>Todas las Emisoras</item>
++    <item>Cultura</item>
++    <item>Actualidad</item>
++    <item>Programas para Niños</item>
++    <item>Música Country</item>
++    <item>Documental</item>
++    <item>Drama</item>
++    <item>Música de Fácil Audición</item>
++    <item>Educación</item>
++    <item>Emergencia</item>
++    <item>Prueba de Emergencia</item>
++    <item>Finanzas</item>
++    <item>Música Folk</item>
++    <item>Información</item>
++    <item>Música Jazz</item>
++    <item>Light Classical</item>
++    <item>Ocio</item>
++    <item>Noticias</item>
++    <item>Música Nacional</item>
++    <item>Otra Música</item>
++    <item>Musica Antigua</item>
++    <item>En Teléfono</item>
++    <item>Música Pop</item>
++    <item>Religión</item>
++    <item>Música Rock</item>
++    <item>Ciencia</item>
++    <item>Serious Classical</item>
++    <item>Temas Sociales</item>
++    <item>Deportes</item>
++    <item>Viajes</item>
++    <item>Variado</item>
++    <item>El Tiempo</item>
++  </string-array>
++
++  <string-array name="search_category_rds_values">
++    <item>0</item>
++    <item>7</item>
++    <item>2</item>
++    <item>18</item>
++    <item>25</item>
++    <item>29</item>
++    <item>6</item>
++    <item>12</item>
++    <item>5</item>
++    <item>31</item>
++    <item>30</item>
++    <item>17</item>
++    <item>28</item>
++    <item>3</item>
++    <item>24</item>
++    <item>13</item>
++    <item>23</item>
++    <item>1</item>
++    <item>26</item>
++    <item>15</item>
++    <item>27</item>
++    <item>21</item>
++    <item>10</item>
++    <item>20</item>
++    <item>11</item>
++    <item>8</item>
++    <item>14</item>
++    <item>19</item>
++    <item>4</item>
++    <item>22</item>
++    <item>9</item>
++    <item>16</item>
++  </string-array>
++
++  <string-array name="presetlist_edit_category">
++    <item>Renombrar</item>
++    <item>Auto-Seleccionar</item>
++    <item>Eliminar</item>
++  </string-array>
++
++
++  <string-array name="regional_band_entries">
++    <item>Norte América</item>
++    <item>Europa</item>
++    <item>Japón</item>
++    <item>Japón (Wide)</item>
++    <item>Australia</item>
++    <item>Austria</item>
++    <item>Bélgica</item>
++    <item>Brasil</item>
++    <item>China</item>
++    <item>Chequia</item>
++    <item>Dinamarca</item>
++    <item>Finlandia</item>
++    <item>Francia</item>
++    <item>Alemania</item>
++    <item>Grecia</item>
++    <item>Hong Kong</item>
++    <item>India</item>
++    <item>Irlanda</item>
++    <item>Italia</item>
++    <item>Korea</item>
++    <item>México</item>
++    <item>Países Bajos</item>
++    <item>Nueva Zelanda</item>
++    <item>Noruega</item>
++    <item>Polonia</item>
++    <item>Portugal</item>
++    <item>Rusia</item>
++    <item>Singapur</item>
++    <item>Eslovaquia</item>
++    <item>España</item>
++    <item>Suiza</item>
++    <item>Suecia</item>
++    <item>Taiwan</item>
++    <item>Turquía</item>
++    <item>Reino Unido</item>
++    <item>Estados Unidos</item>
++  </string-array>
++
++  <string-array name="regional_band_values">
++    <item>0</item>
++    <item>1</item>
++    <item>2</item>
++    <item>3</item>
++    <item>4</item>
++    <item>5</item>
++    <item>6</item>
++    <item>7</item>
++    <item>8</item>
++    <item>9</item>
++    <item>10</item>
++    <item>11</item>
++    <item>12</item>
++    <item>13</item>
++    <item>14</item>
++    <item>15</item>
++    <item>16</item>
++    <item>17</item>
++    <item>18</item>
++    <item>19</item>
++    <item>20</item>
++    <item>21</item>
++    <item>22</item>
++    <item>23</item>
++    <item>24</item>
++    <item>25</item>
++    <item>26</item>
++    <item>27</item>
++    <item>28</item>
++    <item>29</item>
++    <item>30</item>
++    <item>31</item>
++    <item>32</item>
++    <item>33</item>
++    <item>34</item>
++    <item>35</item>
++  </string-array>
++
++  <string-array name="regional_band_summary">
++    <item>Norte América (87.5MHz To 108.0MHz In 200 Khz Steps)</item>
++    <item>Europa (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
++    <item>Japón (76.0MHz To  90.0MHz In 100 Khz Steps)</item>
++    <item>Japón (Wide) (90.0MHz To 108.0MHz In 50 Khz Steps)</item>
++    <item>Australia (87.7MHz To 108.0MHz In 100 Khz Steps)</item>
++    <item>Austria (87.5MHz To 108.0MHz In  50 Khz Steps)</item>
++    <item>Bélgica (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
++    <item>Brasil (87.8MHz To 108.0MHz In 200 Khz Step)</item>
++    <item>China (87.0MHz To 108.0MHz In 100 Khz Steps)</item>
++    <item>Chequia (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
++    <item>Dinamarca (87.5MHz To 108.0MHz In 50 Khz Steps)</item>
++    <item>Finlandia (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
++    <item>Francia (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
++    <item>Alemania (87.5MHz To 108.0MHz In 50 Khz Steps)</item>
++    <item>Grecia (87.5MHz To 108.0MHz In 50 Khz Steps)</item>
++    <item>Hong Kong (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
++    <item>India (91.0MHz To 106.4MHz In 100 Khz Steps)</item>
++    <item>Irlanda (87.5MHz To 108.0MHz In 50 Khz Steps)</item>
++    <item>Italia (87.5MHz To 108.0MHz In 50 Khz Steps)</item>
++    <item>Korea (87.5MHz To 108.0MHz In 200 Khz Steps)</item>
++    <item>México (88.1MHz To 107.9MHz In 200 Khz Steps)</item>
++    <item>Países Bajos (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
++    <item>Nueva Zelanda (88.0MHz To 107.0MHz In 100 Khz Steps)</item>
++    <item>Noruega (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
++    <item>Polonia (88.0MHz To 108.0MHz In 50 Khz Steps)</item>
++    <item>Portugal (87.5MHz To 108.0MHz In 50 Khz Steps)</item>
++    <item>Rusia (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
++    <item>Singapur (88.0MHz To 108.0MHz In 100 Khz Steps)</item>
++    <item>Eslovaquia (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
++    <item>España (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
++    <item>Suiza (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
++    <item>Suecia (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
++    <item>Taiwan (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
++    <item>Turquía (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
++    <item>Reino Unido (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
++    <item>Estados Unidos (88.1MHz To 107.9MHz In 200 Khz Steps)</item>
++  </string-array>
++
++  <string-array name="rf_cfg">
++      <item> Obtener parámetros de la emisora actual</item>
++      <item> Obtener parámetros de la emisora Repetir 20 veces</item>
++      <item> Obtener parámetros de la estación de búsqueda</item>
++      <item> Obtener parámetros de barrido de la banda FM</item>
++      <item> Configurar parámetros de búsqueda FM</item>
++  </string-array>
++
++  <string-array name="cfg_rf1">
++      <item> Establecer FM RSSI Delta</item>
++      <item> Establecer Umbral de señal</item>
++      <item> Estadísticas RF </item>
++  </string-array>
++
++  <string-array name="cfg_rf2">
++      <item> Establecer Recuento de Muestras SINR </item>
++      <item> Establecer Umbral de Señal SINR </item>
++      <item> Establecer Umbral IntfDetoutLow </item>
++      <item> EStablecer Umbral IntfDetoutHigh </item>
++      <item> Estadísticas RF </item>
++  </string-array>
++
++  <string-array name="stats_options">
++      <item> Selecciona la opción</item>
++      <item> Configura los parámetros de búsqueda FM</item>
++      <item> Estadísticas RF </item>
++  </string-array>
++
++</resources>
+diff --git a/res/values-es/strings.xml b/res/values-es/strings.xml
+new file mode 100644
+index 0000000..fe4eaf0
+--- /dev/null
++++ b/res/values-es/strings.xml
+@@ -0,0 +1,231 @@
++<?xml version="1.0" encoding="utf-8"?>
++<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
++    <string name="app_name">Radio FM</string>
++    <string name="tx_app_name">FM Tx</string>
++
++    <string name="default_sleep"></string>
++    <string name="menu_add_to_preset">Añadir a Predeterminados</string>
++    <string name="menu_settings">Ajustes</string>
++    <string name="menu_record_start">Comenzar Grabación</string>
++    <string name="menu_record_stop">Detener Grabación</string>
++    <string name="menu_all_channels">Todos los Canales</string>
++    <string name="app_label_all_channels">Todos los Canales</string>
++    <string name="button_ok">OK</string>
++    <string name="button_cancel">Cancelar</string>
++    <string name="button_delete">Eliminar</string>
++    <string name="error_sdcard_access">Imposible acceder a la Tarjeta SD</string>
++    <string name="fm_service_started">Servicio FM</string>
++    <string name="menu_sleep">Suspensión</string>
++    <string name="menu_sleep_cancel">Cancelar Suspensión</string>
++    <string name="menu_wired_headset">Auriculares</string>
++    <string name="menu_speaker_on">Activar Altavoz</string>
++    <string name="menu_display_tags">Mostrar Etiquetas</string>
++    <string name="menu_speaker_off">Desactivar Altavoz</string>
++    <string name="menu_scan_start">Escanear</string>
++    <string name="menu_scan_stop">Detener la búsqueda</string>
++    <string name="menu_stats">Estadísticas FM RF</string>
++    <string name="button_text_stop">Detener</string>
++    <string name="msg_seeking">Búsqueda de Emisora FM</string>
++    <string name="msg_scanning">Búsqueda para todas las Emisoras FM</string>
++    <string name="msg_scanning_pty">Buscando para "<xliff:g id="pty_name">%1$s</xliff:g>"</string>
++    <string name="msg_search_title">FM - <xliff:g id="frequency_string">%1$s</xliff:g></string>
++    <string name="msg_searching">Búsqueda de Emisoras Potentes para crear una Lista Preestablecida </string>
++    <string name="msg_searching_title">Auto-Seleccionar Predeterminados</string>
++    <string name="msg_weak_searching">Búsqueda de frecuencias para transmitir</string>
++
++    <string name="msg_noantenna">Por favor, inserta Auriculares para usar la Radio FM </string>
++    <string name="msg_headsetpluggedin">Desconecta todos los Receptores para usar FM Tx</string>
++    <string name="msg_callactive">FM Tx no se admite cuando hay una llamada de voz en curso</string>
++    <string name="dialog_sleep_title">Seleccionar Auto-Apagado Tiempo en reposo</string>
++        <string name="preset_select_name">Seleccionar "<xliff:g id="preset_name">%1$s</xliff:g>"</string>
++        <string name="presetlist_select_name">Seleccionar "<xliff:g id="presetlist_name">%1$s</xliff:g>"</string>
++    <string name="presetlist_add_new">Añadir Lista Nueva</string>
++    <string name="dialog_presetlist_title">Listas de Predeterminados</string>
++        <string name="presetlist_prefix_name">FM - </string>
++        <string name="dialog_presetlist_rename_title">Introduce un nombre </string>
++        <string name="dialog_preset_rename_title">Introduce un nombre </string>
++        <string name="presetlist_delete_name">Eliminar "<xliff:g id="presetlist_name">%1$s</xliff:g>" y sus Emisoras?</string>
++        <string name="presetlist_autoselect_title">Confirmar Auto-Selección</string>
++        <string name="presetlist_autoselect_name">La Selección Automática eliminará todos los Presets de la Lista  "<xliff:g id="presetlist_name">%1$s</xliff:g>", Continuar?</string>
++        <string name="fmtx_autoselect_name">La Selección Automática eliminará todos los Presets, Continuar?</string>
++
++    <string name="enter_frequency">Sintonizar la Emisora</string>
++    <string name="enter_new_frequency_title">Introducir Frecuencia </string>
++
++    <string name="preset_now_playing">Reproduciendo ahora </string>
++        <string name="preset_pref_title">"<xliff:g id="preset_name">%1$s</xliff:g>"
++        (<xliff:g id="preset_freq">%2$s</xliff:g>)</string>
++        <string name="preset_delete_title">Eliminar Predeterminado</string>
++
++        <string name="preset_delete_name">Eliminar "<xliff:g id="preset_name">%1$s</xliff:g>"
++        de "<xliff:g id="presetlist_name">%2$s</xliff:g>"</string>
++
++        <string name="preset_confirm_delete_name">Eliminar "<xliff:g id="preset_name">%1$s</xliff:g>"
++        de "<xliff:g id="presetlist_name">%2$s</xliff:g>" ?</string>
++
++    <string name="preset_name_dialog_title">Introduce un nombre </string>
++    <string name="preset_name_summary">"<xliff:g id="preset_name">%1$s</xliff:g>" </string>
++    <string name="preset_name_title">Renombrar</string>
++
++    <string name="preset_search_title">Buscar</string>
++    <string name="preset_search_name">Buscar por "<xliff:g id="preset_name">%1$s</xliff:g>"</string>
++
++    <string name="preset_preference_title">Emisoras FM en "<xliff:g id="preset_name">%1$s</xliff:g>" </string>
++
++    <string name="preset_empty_title">No hay Emisoras en la Lista</string>
++    <string name="preset_empty_add_summary">Añadir Emisoras</string>
++
++    <string name="preset_add">Añadir</string>
++    <string name="preset_replace">Reemplazar</string>
++    <string name="preset_tune">Sintonizar</string>
++    <string name="preset_rename">Renombrar</string>
++    <string name="preset_delete">Eliminar</string>
++    <string name="preset_search">Buscar por "<xliff:g id="preset_pi">%1$s</xliff:g>"
++        </string>
++
++    <string name="stat_notif_frequency">"<xliff:g id="frequency">%1$s</xliff:g>" MHz</string>
++    <string name="stat_notif_tx_frequency">Transmitiendo en: "<xliff:g id="frequency">%1$s</xliff:g>"</string>
++
++
++    <string name="sel_band_menu">Seleccionar Banda Regional</string>
++    <string name="test_menu">Seleccionar Prueba</string>
++
++    <string name="settings_menu">Ajustes</string>
++    <string name="regional_band">Banda Regional</string>
++
++    <string name="aud_output_mode">Modo de Salida de Audio</string>
++    <string name="sel_audio_output">Seleccionar Salida de Audio</string>
++
++    <string name="record_dur">Duración de la Grabación</string>
++    <string name="sel_rec_dur">Seleccionar Duración de la Grabación</string>
++
++    <string name="auto_select_af">Frecuencia Alternativa</string>
++    <string name="auto_select_af_enabled">Auto Selección Activada</string>
++    <string name="auto_select_af_disabled">Auto Selección Desactivada</string>
++
++    <string name="fac_defaults">Revertir a los Valores Predeterminados</string>
++    <string name="revert_to_fac">Revertir a los Valores Predeterminados</string>
++    <string name="settings_back">Volver</string>
++
++    <string name="settings_revert_confirm_title">Confirmar Restablecer Ajustes</string>
++    <string name="settings_revert_confirm_msg">Esto eliminará todos los Ajustes incluyendo los Predeterminados</string>
++
++    <string name="settings_back_summary">Volver a la Vista Previa</string>
++    <string name="settings_revert_defaults_title">Revertir a los Valores Predeterminados</string>
++    <string name="settings_revert_defaults_summary">Reiniciar todos los Ajustes</string>
++
++    <string name="audio_type_stereo">Estéreo</string>
++    <string name="audio_type_mono">Mono</string>
++
++    <string name="default_band">Estados Unidos</string>
++    <string name="default_audio">Estéreo</string>
++    <string name="default_record_duration">5 minutos</string>
++    <string name="factory_reset_dialog_title">Confirmar Reinicio</string>
++    <string name="factory_reset_dialog_message">Esto eliminará todos los Ajustes incluyendo los Predeterminados</string>
++    <string name="station_move">Mover</string>
++    <string name="station_edit">Editar</string>
++    <!-- alert to the user that USB storage must be available before using FM recording  [CHAR LIMIT=NONE] -->
++   <string name="no_storage">Montar Tarjeta SD antes de empezar a grabar.</string>
++   <!-- alert to the user that the USB storage is being disk-checked [CHAR LIMIT=30] -->
++   <string name="preparing_sd">Preparando Tarjeta SD </string>
++   <!-- alert to the user that the FM fails to read or write the USB storage. [CHAR LIMIT=NONE] -->
++   <string name="access_sd_fail">No se puede acceder a la Tarjeta SD.</string>
++   <!-- Low-memory dialog message [CHAR LIMT=NONE] -->
++   <string name="spaceIsLow_content">Tu tarjeta SD se está quedando sin espacio. Cambia los ajustes de la calidad o elimina algunas imágenes u otros archivos</string>
++   <!-- The messsage shown when FM record reaches size limit. -->
++   <string name="FMRecording_reach_size_limit">Límite de tamaño alcanzado.</string>
++
++    <string name="delete_station_title">Eliminar</string>
++    <string name="find_af_station">Encontrar</string>
++    <string name="menu_add_list">Añadir Lista</string>
++    <string name="menu_rename_list">Renombrar Lista</string>
++    <string name="menu_reorder_list">Reordenar Lista</string>
++    <string name="menu_scan_for_preset">Buscar Presets</string>
++    <string name="menu_delete_list">Eliminar Lista</string>
++    <string name="alert_dialog_ok">Ok</string>
++    <string name="alert_dialog_cancel">Cancelar</string>
++
++    <string name="search_dialog_title">Escanear Emisoras</string>
++
++    <string name="search_category_key">search_category_type</string>
++    <string name="search_category">Selecionar Tipo de Búsqueda</string>
++    <string name="search_category_title">Buscar Tipo</string>
++    <string name="default_search_category">Buscar</string>
++    <string name="search_category_tune">Sintonizar</string>
++
++    <string name="search_category_type_key">search_category_value_type</string>
++    <string name="search_category_type">Seleccionar Búsqueda por Tipo de Programa</string>
++    <string name="search_category_type_title">Buscar por Tipo de Programa</string>
++    <string name="default_search_category_type">Todas emisoras</string>
++
++    <string name="presets_back">Volver</string>
++    <string name="presets_back_summary">Volver a la Vista Previa</string>
++
++    <string name="nav_mode_presets">Predeterminados</string>
++    <string name="nav_mode_stations">Emisoras</string>
++
++    <string name="prog_service_string"></string>
++    <string name="radio_text_string">Este es el largo mensaje de Cadena de Texto de Radio que necesitas para desplazarte</string>
++    <string name="eradio_text_string">Mensaje de Texto de Radio extendido</string>
++    <string name="pty_string"></string>
++    <string name="frequency_string"></string>
++    <string name="station_id_string"></string>
++
++
++        <string name="fm_command_timeout_title">Tiempo de espera</string>
++        <string name="fm_tune_timeout_msg">No se ha recibido respuesta de la Emisora FM. Si el problema persiste, por favor apaga la Radio FM y vuelve a encenderla</string>
++
++        <string name="fm_command_failed_title">Operación FM fallida</string>
++        <string name="fm_cmd_failed_msg">Operación FM fallida. Si el problema persiste, apaga la radio y vuelve a encenderla.
++        </string>
++        <string name="fm_cmd_failed_msg_hdmi">Operación FM fallida. La concurrencia de FM y HDMI no está soportada.
++        </string>
++        <string name="fm_cmd_failed_call_on">Operación FM fallida. No se permite audio FM durante la llamada. </string>
++
++    <skip/>
++    <!-- Do not translate. Duration format. -->
++    <string name="durationformat"><xliff:g id="format">%2$d:%5$02d</xliff:g></string>
++
++    <string name="default_record"></string>
++    <string name="default_preset_list_name"> Lista FM </string>
++    <string name="default_station"> FM </string>
++    <string name="default_blank"> </string>
++    <string name="add_station">+</string>
++    <string name="stop_scanning">Detener el escaneo</string>
++    <string name="transmit_msg_string">Transmitiendo en:</string>
++    <!-- the name under which recordings will be visible in the media database is formatted like this -->
++    <string name="audio_db_title_format"><xliff:g id="format">yyyy-MM-dd HH:mm:ss</xliff:g></string>
++    <!-- all recordings will show up in the media database with this 'artist' name -->
++    <string name="audio_db_artist_name">Mis grabaciones FM</string>
++    <!-- all recordings will show up in the media database with this 'album' name -->
++    <string name="audio_db_album_name">Grabaciones FM</string>
++    <!-- all recordings will show up in the media database in a playlist with this name -->
++    <string name="audio_db_playlist_name">Grabaciones FM</string>
++    <string name="test_prompt">Elegir una prueba</string>
++    <string name="test_run">Ejecutar prueba</string>
++    <string name="set_rmmsi_delta">Configurar RMSSI Delta</string>
++    <string name="set_sigth">Configurar Señal Th</string>
++    <string name="type_rd"></string>
++    <string name="srch_params">Configurar RMSSI Delta</string>
++    <string name="srch_params_1">Configurar Señal Th </string>
++    <string name="enter_rssi">Introducir RMSSI Delta</string>
++    <string name="enter_sigth">Introducir señal Th</string>
++    <string name="enter_SinrSmplsCnt">Introducir Recuento de Muestras SINR</string>
++    <string name="set_SinrSmplsCnt">Configurar Muestras SINR</string>
++    <string name="enter_SinrTh">Introducir Umbral SINR</string>
++    <string name="set_SinrTh">Configurar Umbral SINR</string>
++    <string name="enter_IntfLowTh">Introducir Umbral Intf Det Low</string>
++    <string name="set_IntfLowTh">Configurar Umbral Intf Det Low</string>
++    <string name="enter_IntfHighTh">Introducir Umbral Intf Det High</string>
++    <string name="set_IntfHighTh">Configurar Umbral Intf Det High</string>
++
++    <string name="station_name">Emisora:</string>
++    <string name="station_exists">Esta frecuencia ya existe!</string>
++    <string name="station_list_delete_station">Eliminar:<xliff:g id="name">%s</xliff:g></string>
++    <string name="station_list_delete_station_prompt">Estás seguro de querer eliminar <xliff:g id="name">%s</xliff:g> .</string>
++    <string name="station_name_empty">El nombre de la emisora está vacío, por favor introdúcelo de nuevo</string>
++    <string name="station_name_exist">Ya hay una emisora llamada \"<xliff:g id="name">%s</xliff:g>\". Por favor, introduce un nombre diferente.</string>
++
++    <string name="rt_plus_tags">Etiquetas</string>
++
++</resources>
+diff --git a/res/values-pt/arrays.xml b/res/values-pt/arrays.xml
+new file mode 100644
+index 0000000..b217d8f
+--- /dev/null
++++ b/res/values-pt/arrays.xml
+@@ -0,0 +1,352 @@
++<?xml version="1.0" encoding="utf-8"?>
++<!--
++ * Copyright (c) 2009, 2011, 2012 The Linux Foundation. All rights reserved.
++ *
++ * Redistribution and use in source and binary forms, with or without
++ * modification, are permitted provided that the following conditions are met:
++ *    * Redistributions of source code must retain the above copyright
++ *      notice, this list of conditions and the following disclaimer.
++ *    * Redistributions in binary form must reproduce the above copyright
++ *      notice, this list of conditions and the following disclaimer in the
++ *      documentation and/or other materials provided with the distribution.
++ *    * Neither the name of The Linux Foundation nor
++ *      the names of its contributors may be used to endorse or promote
++ *      products derived from this software without specific prior written
++ *      permission.
++ *
++ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
++ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
++ * IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
++ * NON-INFRINGEMENT ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR
++ * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
++ * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
++ * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
++ * OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
++ * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
++ * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
++ * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
++-->
++<resources>
++
++  <string-array name="ster_mon_entries">
++    <item>Estéreo</item>
++    <item>Mono</item>
++  </string-array>
++
++  <string-array name="ster_mon_values">
++    <item>0</item>
++    <item>1</item>
++  </string-array>
++
++  <string-array name="record_durations_entries">
++    <item>5 minutos</item>
++    <item>15 minutos</item>
++    <item>30 minutos</item>
++    <item>Até parar</item>
++  </string-array>
++
++
++  <string-array name="record_duration_values">
++    <item>5</item>
++    <item>15</item>
++    <item>30</item>
++    <item>-1</item>
++  </string-array>
++
++  <string-array name="sleep_duration_values">
++    <item>15 minutos</item>
++    <item>30 minutos</item>
++    <item>45 minutos</item>
++    <item>1 Hora</item>
++  </string-array>
++
++  <!-- This array should be in seconds and should match the values above -->
++  <string-array name="sleep_duration_values_seconds">
++    <item>900</item>
++    <item>1800</item>
++    <item>2700</item>
++    <item>3600</item>
++  </string-array>
++
++  <string-array name="search_category_rbds_entries">
++    <item>All Stations</item>
++    <item>Adult Hits</item>
++    <item>Classical</item>
++    <item>Classic Rock</item>
++    <item>College</item>
++    <item>Country</item>
++    <item>Emergency</item>
++    <item>Emergency Test</item>
++    <item>Foreign Language</item>
++    <item>Information</item>
++    <item>Jazz</item>
++    <item>News</item>
++    <item>Nostalgia</item>
++    <item>Oldies</item>
++    <item>Personality</item>
++    <item>Public</item>
++    <item>Religious Music</item>
++    <item>Religious Talk</item>
++    <item>Rhythm and Blues</item>
++    <item>Rock</item>
++    <item>Soft</item>
++    <item>Soft Rock</item>
++    <item>Soft Rhythm and Blues</item>
++    <item>Sports</item>
++    <item>Talk</item>
++    <item>Top 40</item>
++    <item>Weather</item>
++  </string-array>
++
++  <string-array name="search_category_rbds_values">
++    <item>0</item>
++    <item>7</item>
++    <item>15</item>
++    <item>6</item>
++    <item>23</item>
++    <item>10</item>
++    <item>31</item>
++    <item>30</item>
++    <item>18</item>
++    <item>2</item>
++    <item>14</item>
++    <item>1</item>
++    <item>13</item>
++    <item>11</item>
++    <item>21</item>
++    <item>22</item>
++    <item>19</item>
++    <item>20</item>
++    <item>16</item>
++    <item>5</item>
++    <item>12</item>
++    <item>8</item>
++    <item>17</item>
++    <item>3</item>
++    <item>4</item>
++    <item>9</item>
++    <item>29</item>
++  </string-array>
++
++  <string-array name="search_category_rds_entries">
++    <item>All Stations</item>
++    <item>Culture</item>
++    <item>Current Affairs</item>
++    <item>Children programs</item>
++    <item>Country Music</item>
++    <item>Documentary</item>
++    <item>Drama</item>
++    <item>Easy Listening Music</item>
++    <item>Education</item>
++    <item>Emergency</item>
++    <item>Emergency Test</item>
++    <item>Finance</item>
++    <item>Folk Music</item>
++    <item>Information</item>
++    <item>Jazz Music</item>
++    <item>Light classical</item>
++    <item>Leisure</item>
++    <item>News</item>
++    <item>National Music</item>
++    <item>Other Music</item>
++    <item>Oldies Music</item>
++    <item>Phone In</item>
++    <item>Pop Music</item>
++    <item>Religion</item>
++    <item>Rock Music</item>
++    <item>Science</item>
++    <item>Serious classical</item>
++    <item>Social Affairs</item>
++    <item>Sport</item>
++    <item>Travel</item>
++    <item>Varied</item>
++    <item>Weather</item>
++  </string-array>
++
++  <string-array name="search_category_rds_values">
++    <item>0</item>
++    <item>7</item>
++    <item>2</item>
++    <item>18</item>
++    <item>25</item>
++    <item>29</item>
++    <item>6</item>
++    <item>12</item>
++    <item>5</item>
++    <item>31</item>
++    <item>30</item>
++    <item>17</item>
++    <item>28</item>
++    <item>3</item>
++    <item>24</item>
++    <item>13</item>
++    <item>23</item>
++    <item>1</item>
++    <item>26</item>
++    <item>15</item>
++    <item>27</item>
++    <item>21</item>
++    <item>10</item>
++    <item>20</item>
++    <item>11</item>
++    <item>8</item>
++    <item>14</item>
++    <item>19</item>
++    <item>4</item>
++    <item>22</item>
++    <item>9</item>
++    <item>16</item>
++  </string-array>
++
++  <string-array name="presetlist_edit_category">
++    <item>Rename</item>
++    <item>Auto-Select</item>
++    <item>Delete</item>
++  </string-array>
++
++  <string-array name="regional_band_entries">
++    <item>North America</item>
++    <item>Europe</item>
++    <item>Japan</item>
++    <item>Japan (Wide)</item>
++    <item>Australia</item>
++    <item>Austria</item>
++    <item>Belgium</item>
++    <item>Brazil</item>
++    <item>China</item>
++    <item>Czech</item>
++    <item>Denmark</item>
++    <item>Finland</item>
++    <item>France</item>
++    <item>Germany</item>
++    <item>Greece</item>
++    <item>Hong Kong</item>
++    <item>India</item>
++    <item>Ireland</item>
++    <item>Italy</item>
++    <item>Korea</item>
++    <item>Mexico</item>
++    <item>Netherlands</item>
++    <item>New Zealand</item>
++    <item>Norway</item>
++    <item>Poland</item>
++    <item>Portugal</item>
++    <item>Russia</item>
++    <item>Singapore</item>
++    <item>Slovakia</item>
++    <item>Spain</item>
++    <item>Switzerland</item>
++    <item>Sweden</item>
++    <item>Taiwan</item>
++    <item>Turkey</item>
++    <item>United Kingdom </item>
++    <item>United States</item>
++  </string-array>
++
++  <string-array name="regional_band_values">
++    <item>0</item>
++    <item>1</item>
++    <item>2</item>
++    <item>3</item>
++    <item>4</item>
++    <item>5</item>
++    <item>6</item>
++    <item>7</item>
++    <item>8</item>
++    <item>9</item>
++    <item>10</item>
++    <item>11</item>
++    <item>12</item>
++    <item>13</item>
++    <item>14</item>
++    <item>15</item>
++    <item>16</item>
++    <item>17</item>
++    <item>18</item>
++    <item>19</item>
++    <item>20</item>
++    <item>21</item>
++    <item>22</item>
++    <item>23</item>
++    <item>24</item>
++    <item>25</item>
++    <item>26</item>
++    <item>27</item>
++    <item>28</item>
++    <item>29</item>
++    <item>30</item>
++    <item>31</item>
++    <item>32</item>
++    <item>33</item>
++    <item>34</item>
++    <item>35</item>
++  </string-array>
++
++  <string-array name="regional_band_summary">
++    <item>North America (87.5MHz To 108.0MHz In 200 Khz Steps)</item>
++    <item>Europe (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
++    <item>Japan (76.0MHz To  90.0MHz In 100 Khz Steps)</item>
++    <item>Japan (Wide) (90.0MHz To 108.0MHz In 50 Khz Steps)</item>
++    <item>Australia (87.7MHz To 108.0MHz In 100 Khz Steps)</item>
++    <item>Austria (87.5MHz To 108.0MHz In  50 Khz Steps)</item>
++    <item>Belgium (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
++    <item>Brazil (87.8MHz To 108.0MHz In 200 Khz Step)</item>
++    <item>China (87.0MHz To 108.0MHz In 100 Khz Steps)</item>
++    <item>Czech (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
++    <item>Denmark (87.5MHz To 108.0MHz In 50 Khz Steps)</item>
++    <item>Finland (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
++    <item>France (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
++    <item>Germany (87.5MHz To 108.0MHz In 50 Khz Steps)</item>
++    <item>Greece (87.5MHz To 108.0MHz In 50 Khz Steps)</item>
++    <item>Hong Kong (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
++    <item>India (91.0MHz To 106.4MHz In 100 Khz Steps)</item>
++    <item>Ireland (87.5MHz To 108.0MHz In 50 Khz Steps)</item>
++    <item>Italy (87.5MHz To 108.0MHz In 50 Khz Steps)</item>
++    <item>Korea (87.5MHz To 108.0MHz In 200 Khz Steps)</item>
++    <item>Mexico (88.1MHz To 107.9MHz In 200 Khz Steps)</item>
++    <item>Netherlands (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
++    <item>New Zealand (88.0MHz To 107.0MHz In 100 Khz Steps)</item>
++    <item>Norway (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
++    <item>Poland (88.0MHz To 108.0MHz In 50 Khz Steps)</item>
++    <item>Portugal (87.5MHz To 108.0MHz In 50 Khz Steps)</item>
++    <item>Russia (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
++    <item>Singapore (88.0MHz To 108.0MHz In 100 Khz Steps)</item>
++    <item>Slovakia (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
++    <item>Spain (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
++    <item>Switzerland (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
++    <item>Sweden (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
++    <item>Taiwan (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
++    <item>Turkey (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
++    <item>United Kingdom (87.5MHz To 108.0MHz In 100 Khz Steps)</item>
++    <item>United States (88.1MHz To 107.9MHz In 200 Khz Steps)</item>
++  </string-array>
++
++  <string-array name="rf_cfg">
++      <item> Get Current Station Parameters</item>
++      <item> Get Station Parameters Repeat 20 times</item>
++      <item> Get Search  station parameters</item>
++      <item> Get FM Band sweep parameters</item>
++      <item> Configure FM Search Parameters</item>
++  </string-array>
++
++  <string-array name="cfg_rf1">
++      <item> Set FM RSSI Delta</item>
++      <item> Set Signal Threshold</item>
++      <item> RF Statistics</item>
++  </string-array>
++
++  <string-array name="cfg_rf2">
++      <item> Set SINR Samples Count</item>
++      <item> Set SINR Threshold</item>
++      <item> Set IntfDetoutLow Threshold</item>
++      <item> Set IntfDetoutHigh Threshold</item>
++      <item> RF Statistics</item>
++  </string-array>
++
++  <string-array name="stats_options">
++      <item> Select the option</item>
++      <item> Configure FM Search parameters</item>
++      <item> RF Statistics</item>
++  </string-array>
++
++</resources>
+diff --git a/res/values-pt/strings.xml b/res/values-pt/strings.xml
+new file mode 100644
+index 0000000..8ce950a
+--- /dev/null
++++ b/res/values-pt/strings.xml
+@@ -0,0 +1,224 @@
++<?xml version="1.0" encoding="utf-8"?>
++<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
++    <string name="app_name">Rádio FM</string>
++    <string name="tx_app_name">FM Tx</string>
++
++    <string name="default_sleep"></string>
++    <string name="menu_add_to_preset">Memorizar</string>
++    <string name="menu_settings">Definições</string>
++    <string name="menu_record_start">Iniciar Gravação</string>
++    <string name="menu_record_stop">Parar Gravação</string>
++    <string name="menu_all_channels">Todos os Canais</string>
++    <string name="app_label_all_channels">Todos os Canais</string>
++    <string name="button_ok">OK</string>
++    <string name="button_cancel">Cancelar</string>
++    <string name="button_delete">Apagar</string>
++    <string name="error_sdcard_access">Impossível Aceder ao cartão SD</string>
++    <string name="fm_service_started">Serviço FM</string>
++    <string name="menu_sleep">Desligar Automaticamente</string>
++    <string name="menu_sleep_cancel">Cancelar Desligar Automático</string>
++    <string name="menu_wired_headset">Auricular com fios</string>
++    <string name="menu_speaker_on">Ativar Altifalante</string>
++    <string name="menu_display_tags">Mostrar Etiquetas</string>
++    <string name="menu_speaker_off">Desativar Altifalante</string>
++    <string name="menu_scan_start">Iniciar Pesquisa</string>
++    <string name="menu_scan_stop">Parar Pesquisa</string>
++    <string name="menu_stats">Estatísticas FM RF</string>
++    <string name="button_text_stop">Parar</string>
++    <string name="msg_seeking">Pesquisando estação FM</string>
++    <string name="msg_scanning">Pesquisando todas as estações FM</string>
++    <string name="msg_scanning_pty">Pesquisando por "<xliff:g id="pty_name">%1$s</xliff:g>"</string>
++    <string name="msg_search_title">FM - <xliff:g id="frequency_string">%1$s</xliff:g></string>
++    <string name="msg_searching">Pesquisando estações fortes para criar uma lista automática </string>
++    <string name="msg_searching_title">Memorização Automática</string>
++    <string name="msg_weak_searching">Procurando frequências para transmissão</string>
++
++    <string name="msg_noantenna">Por favor ligue os auriculares com fio para usar o rádio FM</string>
++    <string name="msg_headsetpluggedin">Desligue todos os auriculares para usar FM Tx</string>
++    <string name="msg_callactive">FM Tx não é suportado durante chamadas de voz</string>
++    <string name="dialog_sleep_title">Selecionar Tempo para Desligar Automaticamente</string>
++    <string name="preset_select_name">Selecionar "<xliff:g id="preset_name">%1$s</xliff:g>"</string>
++    <string name="presetlist_select_name">Selecionar "<xliff:g id="presetlist_name">%1$s</xliff:g>"</string>
++    <string name="presetlist_add_new">Criar Nova Lista</string>
++    <string name="dialog_presetlist_title">Listas de Estações</string>
++    <string name="presetlist_prefix_name">FM - </string>
++    <string name="dialog_presetlist_rename_title">Introduza um nome </string>
++    <string name="dialog_preset_rename_title">Introduza um nome </string>
++    <string name="presetlist_delete_name">Apagar "<xliff:g id="presetlist_name">%1$s</xliff:g>" e as suas estações?</string>
++    <string name="presetlist_autoselect_title">Confirmar Escolha Automática</string>
++    <string name="presetlist_autoselect_name">A Escolha Automática irá apagar todas as estações da lista  "<xliff:g id="presetlist_name">%1$s</xliff:g>", Continuar?</string>
++    <string name="fmtx_autoselect_name">Auto-Select will delete all the Presets, Continue?</string>
++
++    <string name="enter_frequency">Sintonizar Estação</string>
++    <string name="enter_new_frequency_title">Introduza a frequência </string>
++
++    <string name="preset_now_playing">Tocando </string>
++    <string name="preset_pref_title">"<xliff:g id="preset_name">%1$s</xliff:g>"
++        (<xliff:g id="preset_freq">%2$s</xliff:g>)</string>
++    <string name="preset_delete_title">Apagar Memória</string>
++
++    <string name="preset_delete_name">Apagar "<xliff:g id="preset_name">%1$s</xliff:g>" de "<xliff:g id="presetlist_name">%2$s</xliff:g>"</string>
++
++    <string name="preset_confirm_delete_name">Apagar "<xliff:g id="preset_name">%1$s</xliff:g>" de "<xliff:g id="presetlist_name">%2$s</xliff:g>" ?</string>
++
++    <string name="preset_name_dialog_title">Enter a name </string>
++    <string name="preset_name_summary">"<xliff:g id="preset_name">%1$s</xliff:g>" </string>
++    <string name="preset_name_title">Renomear</string>
++
++    <string name="preset_search_title">Pesquisar</string>
++    <string name="preset_search_name">Pesquisar por "<xliff:g id="preset_name">%1$s</xliff:g>"</string>
++
++    <string name="preset_preference_title">Estações FM em "<xliff:g id="preset_name">%1$s</xliff:g>" </string>
++
++    <string name="preset_empty_title">Lista de Estações vazia</string>
++    <string name="preset_empty_add_summary">Adicionar Estações</string>
++
++    <string name="preset_add">Adicionar</string>
++    <string name="preset_replace">Substituir</string>
++    <string name="preset_tune">Sintonizar</string>
++    <string name="preset_rename">Renomear</string>
++    <string name="preset_delete">Apagar</string>
++    <string name="preset_search">Pesquisar por "<xliff:g id="preset_pi">%1$s</xliff:g>"</string>
++
++    <string name="stat_notif_frequency">"<xliff:g id="frequency">%1$s</xliff:g>" MHz</string>
++    <string name="stat_notif_tx_frequency">Transmitindo em: "<xliff:g id="frequency">%1$s</xliff:g>"</string>
++
++
++    <string name="sel_band_menu">Select Regional Band</string>
++    <string name="test_menu">Select Test</string>
++
++    <string name="settings_menu">Definições</string>
++    <string name="regional_band">Regional Band</string>
++
++    <string name="aud_output_mode">Modo de Saída Audio</string>
++    <string name="sel_audio_output">Escolher Saída Audio</string>
++
++    <string name="record_dur">Duração da Gravação</string>
++    <string name="sel_rec_dur">Escolher Duração da Gravação</string>
++
++    <string name="auto_select_af">Frequência Alternativa</string>
++    <string name="auto_select_af_enabled">Seleção Automática Ligada</string>
++    <string name="auto_select_af_disabled">Seleção Automática Desligada</string>
++
++    <string name="fac_defaults">Repor Definições de Fábrica</string>
++    <string name="revert_to_fac">Repor Definições de Fábrica</string>
++    <string name="settings_back">Regressar</string>
++
++    <string name="settings_revert_confirm_title">Confirmar Reposição das Definições</string>
++    <string name="settings_revert_confirm_msg">Todas as definições serão repostas, assim como as estações memorizadas</string>
++
++    <string name="settings_back_summary">Regressar à vista anterior</string>
++    <string name="settings_revert_defaults_title">Repor Definições de Fábrica</string>
++    <string name="settings_revert_defaults_summary">Repor todas as Definições</string>
++
++    <string name="audio_type_stereo">Estéreo</string>
++    <string name="audio_type_mono">Mono</string>
++
++    <string name="default_band">United States</string>
++    <string name="default_audio">Estéreo</string>
++    <string name="default_record_duration">5 minutos</string>
++    <string name="factory_reset_dialog_title">Confirmar Reposição</string>
++    <string name="factory_reset_dialog_message">Todas as definições serão repostas, assim como as estações memorizadas</string>
++    <string name="station_move">Mover</string>
++    <string name="station_edit">Editar</string>
++    <!-- alert to the user that USB storage must be available before using FM recording  [CHAR LIMIT=NONE] -->
++    <string name="no_storage">Monte o cartão SD antes de iniciar a gravação.</string>
++    <!-- alert to the user that the USB storage is being disk-checked [CHAR LIMIT=30] -->
++    <string name="preparing_sd">Preparando o cartão SD</string>
++    <!-- alert to the user that the FM fails to read or write the USB storage. [CHAR LIMIT=NONE] -->
++    <string name="access_sd_fail">Não foi possível aceder ao cartão SD.</string>
++    <!-- Low-memory dialog message [CHAR LIMT=NONE] -->
++    <string name="spaceIsLow_content">Your SD card storage is running out of space. Change the quality setting or delete some images or other files.</string>
++    <!-- The messsage shown when FM record reaches size limit. -->
++    <string name="FMRecording_reach_size_limit">Size limit reached.</string>
++
++    <string name="delete_station_title">Apagar</string>
++    <string name="find_af_station">Procurar</string>
++    <string name="menu_add_list">Adicionar Lista</string>
++    <string name="menu_rename_list">Renomear Lista</string>
++    <string name="menu_reorder_list">Reordenar Lista</string>
++    <string name="menu_scan_for_preset">Procurar Memórias</string>
++    <string name="menu_delete_list">Apagar Lista</string>
++    <string name="alert_dialog_ok">Ok</string>
++    <string name="alert_dialog_cancel">Cancelar</string>
++
++    <string name="search_dialog_title">Procurar Estações</string>
++
++    <string name="search_category_key">search_category_type</string>
++    <string name="search_category">Selecione Tipo de Pesquisa</string>
++    <string name="search_category_title">Tipo de Pesquisa</string>
++    <string name="default_search_category">Procura</string>
++    <string name="search_category_tune">Sintonia</string>
++
++    <string name="search_category_type_key">search_category_value_type</string>
++    <string name="search_category_type">Select Search by Program Type</string>
++    <string name="search_category_type_title">Search by Program Type</string>
++    <string name="default_search_category_type">All Stations</string>
++
++    <string name="presets_back">Back</string>
++    <string name="presets_back_summary">Return to previous view</string>
++
++    <string name="nav_mode_presets">Presets</string>
++    <string name="nav_mode_stations">Stations</string>
++
++    <string name="prog_service_string"></string>
++    <string name="radio_text_string">This is the long Radio Text String Message that needs to scroll</string>
++    <string name="eradio_text_string">Extended Radio Text Message</string>
++    <string name="pty_string"></string>
++    <string name="frequency_string"></string>
++    <string name="station_id_string"></string>
++
++    <string name="fm_command_timeout_title">Timeout</string>
++    <string name="fm_tune_timeout_msg">Problemas na sintonização da estação. Se o problema persistir, por favor desligue e volte a ligar o rádio.</string>
++
++    <string name="fm_command_failed_title">Operação FM falhada.</string>
++    <string name="fm_cmd_failed_msg">A operação FM falhou. Se o problema persistir, por favor desligue e volte a ligar o rádio.</string>
++    <string name="fm_cmd_failed_msg_hdmi">Operação FM falhada. FM e HDMI não podem ser usados simultaneamente.</string>
++    <string name="fm_cmd_failed_call_on">Operação FM falhada. O audio FM não é permitido durante uma chamada. </string>
++
++    <!-- Do not translate. Duration format. -->
++    <string name="durationformat"><xliff:g id="format">%2$d:%5$02d</xliff:g></string>
++
++    <string name="default_record"></string>
++    <string name="default_preset_list_name"> Lista FM </string>
++    <string name="default_station"> FM </string>
++    <string name="default_blank"> </string>
++    <string name="add_station">+</string>
++    <string name="stop_scanning">Parar Pesquisa</string>
++    <string name="transmit_msg_string">Transmitindo em:</string>
++    <!-- the name under which recordings will be visible in the media database is formatted like this -->
++    <string name="audio_db_title_format"><xliff:g id="format">yyyy-MM-dd HH:mm:ss</xliff:g></string>
++    <!-- all recordings will show up in the media database with this 'artist' name -->
++    <string name="audio_db_artist_name">As minhas gravações FM</string>
++    <!-- all recordings will show up in the media database with this 'album' name -->
++    <string name="audio_db_album_name">Gravações FM</string>
++    <!-- all recordings will show up in the media database in a playlist with this name -->
++    <string name="audio_db_playlist_name">Gravações FM</string>
++    <string name="test_prompt">Choose a test</string>
++    <string name="test_run">Run Test</string>
++    <string name="set_rmmsi_delta">Configure RMSSI Delta</string>
++    <string name="set_sigth">Configure Signal Th</string>
++    <string name="type_rd"></string>
++    <string name="srch_params">Configure RMSSI Delta</string>
++    <string name="srch_params_1">Configure Signal Th </string>
++    <string name="enter_rssi">Enter RMSSI Delta</string>
++    <string name="enter_sigth">Enter Signal Th</string>
++    <string name="enter_SinrSmplsCnt">Enter SINR Samples Count</string>
++    <string name="set_SinrSmplsCnt">Configure SINR Samples</string>
++    <string name="enter_SinrTh">Enter SINR Threshold</string>
++    <string name="set_SinrTh">Configure SINR Threshold</string>
++    <string name="enter_IntfLowTh">Enter Intf Det Low Threshold</string>
++    <string name="set_IntfLowTh">Config Intf Det Low Threshold</string>
++    <string name="enter_IntfHighTh">Enter Intf Det High Threshold</string>
++    <string name="set_IntfHighTh">Config Intf Det High Threshold</string>
++
++    <string name="station_name">Estação:</string>
++    <string name="station_exists">Esta frequência já existe!</string>
++    <string name="station_list_delete_station">Apagar:<xliff:g id="name">%s</xliff:g></string>
++    <string name="station_list_delete_station_prompt">Tem a certeza que quer apagar <xliff:g id="name">%s</xliff:g> .</string>
++    <string name="station_name_empty">Nome de estação vazio, introduza de novo.</string>
++    <string name="station_name_exist">Já existe uma estação chamada \"<xliff:g id="name">%s</xliff:g>\". Por favor use um nome diferente.</string>
++
++    <string name="rt_plus_tags">Etiquetas</string>
++
++</resources>
+-- 
+1.8.3.2
+

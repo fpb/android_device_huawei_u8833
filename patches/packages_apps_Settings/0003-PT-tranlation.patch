@@ -1,0 +1,28 @@
+From b4ad1426c3419ef420087d1e4459d708c6d613aa Mon Sep 17 00:00:00 2001
+From: Kra1o5 <kra1o5x@gmail.com>
+Date: Sat, 23 Nov 2013 15:24:53 +0100
+Subject: [PATCH] PT-tranlation
+
+---
+ res/values-pt/cm_strings.xml | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/res/values-pt/cm_strings.xml b/res/values-pt/cm_strings.xml
+index 5222519..d54a3f1 100644
+--- a/res/values-pt/cm_strings.xml
++++ b/res/values-pt/cm_strings.xml
+@@ -753,4 +753,10 @@ controle adicionais. \'Remover\' apaga a linha selecionada.
+     <string name="collapse_on_dismiss_never_summary">Deixar bandeja de notificação aberta ao remover notificações</string>
+     <string name="collapse_on_dismiss_if_empty_summary">Fechar bandeja de notificação ao remover a última notificação</string>
+     <string name="collapse_on_dismiss_if_no_clearable_summary">Fechar bandeja de notificação ao remover a última notificação removível</string>
++    <!-- Vold Switchable Pair -->
++    <string name="storage_switch_title">Usar cartão SD como principal</string>
++    <string name="storage_switch_summary_off">Utilizando memória interna para aplicações e media</string>
++    <string name="storage_switch_summary_on">Utilizando cartão SD para aplicações e media</string>
++    <string name="reboot_prompt_title">Necessário reinicialiar</string>
++    <string name="reboot_prompt_message">De modo a aplicar as alterações, é necessário reinicializar.\n\nPretende reinicializar agora?</string>
+ </resources>
+\ No newline at end of file
+-- 
+1.8.4.msysgit.0
+
