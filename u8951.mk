@@ -44,25 +44,23 @@ PRODUCT_PACKAGES += \
     copybit.msm7x27a \
     gralloc.msm7x27a \
     hwcomposer.msm7x27a \
-    libgenlock \
     libtilerenderer
 
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
-    audio.primary.u8951 \
-    audio_policy.u8951 \
+    audio.primary.msm7x27a \
+    audio_policy.msm7x27a \
     audio.usb.default \
     libaudioutils
 
 # GPS
 PRODUCT_PACKAGES += \
-    gps.u8951 \
-    libloc_api-rpc
+    gps.msm7x27a
 	
-# u8951 specific	
+# Lights	
 PRODUCT_PACKAGES += \
-    lights.u8951
+    lights.msm7x27a
 	
 # FM Radio
 PRODUCT_PACKAGES += \
@@ -82,11 +80,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     LiveWallpapers \
     LiveWallpapersPicker \
+    VisualizationWallpapers \
     librs_jni	
 	
 # Other Packages
 PRODUCT_PACKAGES += \
-    dexpreopt \
     make_ext4fs \
     setup_fs \
     hwmac \
